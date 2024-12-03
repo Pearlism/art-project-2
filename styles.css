@@ -10,170 +10,29 @@ body {
     line-height: 1.6; /* Improved line height for readability */
 }
 
-h1, h2 {
-    letter-spacing: 1px; /* Add spacing between letters */
-}
-
 header {
     background: #FF00FF; /* Magenta header */
     color: white;
     padding: 20px;
     text-align: center;
-    transition: background 0.5s ease;
-    animation: slideDown 0.5s ease-in-out; /* Slide down effect for the header */
 }
 
-main {
-    padding: 20px;
-}
-
-/* Artist Section */
-.artist {
-    background: #222; /* Dark background for artist sections */
-    margin: 10px 0;
-    padding: 15px;
-    border-radius: 12px; /* Softer corners */
-    box-shadow: 0 2px 5px rgba(255, 0, 255, 0.1); /* Magenta shadow */
-    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease; /* Add background transition */
-    opacity: 0; /* Start hidden for animation */
-    animation: fadeIn 0.5s forwards; /* Fade-in effect for artist sections */
-}
-
-.artist:nth-child(odd) {
-    animation-delay: 0.2s; /* Staggered animation for odd sections */
-}
-
-.artist:nth-child(even) {
-    animation-delay: 0.4s; /* Staggered animation for even sections */
-}
-
-.artist:hover {
-    transform: translateY(-5px) scale(1.02); /* Slightly scale up on hover */
-    background: rgba(255, 0, 255, 0.1); /* Light magenta background on hover */
-}
-
-h2 {
-    color: #FF00FF; /* Magenta for artist names */
-    font-weight: bold; /* Make headings bold */
-}
-
-blockquote {
-    font-style: italic;
-    margin: 10px 0;
-    padding: 10px;
-    background: #333; /* Dark background for blockquote */
-    border-left: 5px solid #FF00FF; /* Magenta border */
-    color: #fff; /* White text for contrast */
-}
-
-/* Resources Section */
-.resources {
-    margin: 20px 0;
-    opacity: 0; /* Start hidden for animation */
-    animation: fadeIn 0.5s forwards; /* Fade-in effect for resources section */
-    animation-delay: 0.6s; /* Delay for the resources section */
-}
-
-.resources ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-.resources a {
-    color: #FF00FF; /* Magenta links */
-    text-decoration: none;
-    position: relative; /* For the underline effect */
-    transition: color 0.3s ease; /* Smooth color transition */
-}
-
-.resources a:hover {
-    color: #e600e6; /* Darker magenta on hover */
-}
-
-.resources a:hover::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: -2px;
-    height: 2px;
-    width: 100%;
-    background: #e600e6; /* Underline effect */
-    transition: width 0.3s ease; /* Smooth transition */
-}
-
-/* Contact Section */
-.contact {
-    margin: 20px 0;
-}
-
-form {
-    display: flex;
-    flex-direction: column;
-}
-
-label {
-    margin-top: 10px;
-    color: #FF00FF; /* Magenta for labels */
-}
-
-input, textarea {
-    padding: 10px;
-    margin-top: 5px;
-    border: 1px solid #ccc; /* Light border for inputs */
-    border-radius: 5px;
-}
-
-button {
-    margin-top: 10px;
-    padding: 10px;
-    background: #FF00FF; /* Magenta button */
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background 0.3s ease;
-}
-
-button:hover {
-    background: #e600e6; /* Darker magenta on hover */
-}
-
-/* Footer */
-footer {
- background: #222; /* Dark background for footer */
-    color: #fff; /* White text for contrast */
-    text-align: center;
-    padding: 20px;
-    position: relative;
-}
-
-footer a {
-    color: #FF00FF; /* Magenta links in footer */
+nav a {
+    color: #FF00FF;
     margin: 0 10px;
     text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
 }
 
-footer a:hover {
-    color: #e600e6; /* Darker magenta on hover */
+nav a:hover {
+    color: #e600e6;
 }
 
-/* Keyframe Animations */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-@keyframes slideDown {
-    from {
-        transform: translateY(-20px);
-        opacity: 0;
-    }
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
+canvas {
+    border: 2px solid #FF00FF;
+    display: block;
+    margin: 20px auto;
+    background-color: #fff;
+    cursor: crosshair;
 }
