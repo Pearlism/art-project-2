@@ -5,8 +5,12 @@ const ctx = canvas.getContext("2d");
 canvas.width = window.innerWidth * 0.8;
 canvas.height = window.innerHeight * 0.6;
 
+// Brush settings
 let painting = false;
+let brushSize = 5;
+let brushColor = "#FF00FF";
 
+// Start and stop painting
 function startPosition(e) {
     painting = true;
     draw(e);
@@ -20,9 +24,9 @@ function endPosition() {
 function draw(e) {
     if (!painting) return;
 
-    ctx.lineWidth = 5;
+    ctx.lineWidth = brushSize;
     ctx.lineCap = "round";
-    ctx.strokeStyle = "#FF00FF";
+    ctx.strokeStyle = brushColor;
 
     ctx.lineTo(e.clientX - canvas.offsetLeft, e.clientY - canvas.offsetTop);
     ctx.stroke();
@@ -30,6 +34,25 @@ function draw(e) {
     ctx.moveTo(e.clientX - canvas.offsetLeft, e.clientY - canvas.offsetTop);
 }
 
+// Event listeners for drawing
 canvas.addEventListener("mousedown", startPosition);
 canvas.addEventListener("mouseup", endPosition);
 canvas.addEventListener("mousemove", draw);
+
+// Adjust brush size
+const decreaseBrush = document.getElementById("decreaseBrush");
+const increaseBrush = document.getElementById("increaseBrush");
+
+decreaseBrush.addEventListener("click", () => {
+    if (brushSize > 1) brushSize--;
+});
+
+increaseBrush.addEventListener("click", () => {
+    if (brushSize < 50) brushSize++;
+});
+
+// Change brush color
+const colorPicker = document.getElementById("colorPicker");
+colorPicker.addEventListener("input", (e) => {
+    brushColor = e.target.value;
+});

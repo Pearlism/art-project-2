@@ -4,20 +4,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Canvas</title>
+    <title>Interactive Canvas</title>
     <link rel="stylesheet" href="styles.css">
     <script defer src="canvas.js"></script>
 </head>
 
 <body>
     <header>
-        <h1>Canvas</h1>
+        <h1>Interactive Canvas</h1>
         <nav>
             <a href="index.html">Home</a>
-            <a href="interactive.html">Canvas</a>
+            <a href="interactive.html">Interactive Canvas</a>
         </nav>
     </header>
     <main>
+        <div class="controls">
+            <button id="decreaseBrush">Slimmer Brush</button>
+            <button id="increaseBrush">Thicker Brush</button>
+            <input type="color" id="colorPicker" title="Pick a color" />
+        </div>
         <canvas id="drawingCanvas"></canvas>
     </main>
     <footer>
