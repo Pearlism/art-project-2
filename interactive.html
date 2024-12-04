@@ -11,7 +11,7 @@
 
 <body>
     <header>
-        <h1>Try Drawing with 1 hand on this Canvas</h1>
+        <h1>Try Drawing with 1 Hand on this Canvas</h1>
         <nav>
             <a href="index.html">Home</a>
             <a href="interactive.html">Canvas</a>
@@ -19,9 +19,12 @@
     </header>
     <main>
         <div class="controls">
-            <button id="decreaseBrush">Slimmer Brush</button>
-            <button id="increaseBrush">Thicker Brush</button>
+            <label for="brushSize">Brush Size: <span id="brushSizeDisplay">5</span></label>
+            <input type="range" id="brushSize" min="1" max="50" value="5" />
             <input type="color" id="colorPicker" title="Pick a color" />
+            <button id="eraseAll">Erase All</button>
+            <button id="toggleEraser">Switch to Eraser</button>
+            <button id="backToBrush">Back to Brush</button>
         </div>
         <canvas id="drawingCanvas"></canvas>
     </main>

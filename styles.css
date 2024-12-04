@@ -139,18 +139,24 @@ input, textarea {
 }
 
 button {
-    margin-top: 10px;
-    padding: 10px;
-    background: #FF00FF; /* Magenta button */
+    margin: 10px;
+    padding: 10px 20px;
+    background-color: #FF00FF;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: background 0.3s ease;
+    transition: background-color 0.3s, box-shadow 0.3s;
 }
 
 button:hover {
-    background: #e600e6; /* Darker magenta on hover */
+    background-color: #e600e6;
+    box-shadow: 0 0 20px 6px rgba(255, 0, 255, 0.7); /* Glow effect */
+}
+
+button:active {
+    transform: translateY(2px);
+    box-shadow: 0 0 10px 3px rgba(255, 0, 255, 0.5); /* Active glow effect */
 }
 
 /* Footer */
@@ -192,6 +198,7 @@ footer a:hover {
         opacity: 1;
     }
 }
+
 .controls {
     text-align: center;
     margin: 20px 0;
@@ -222,7 +229,35 @@ footer a:hover {
     cursor: pointer;
     margin-left: 10px;
 }
-/* Try Now Button */
+
+.controls input[type="range"] {
+    width: 150px; /* Reduced width of the slider */
+    margin-top: 10px;
+}
+
+/* Erase All Button with Glow Effect */
+#eraseAll {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #FF00FF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+#eraseAll:hover {
+    background-color: #e600e6;
+    box-shadow: 0 0 15px 5px rgba(255, 0, 255, 0.6); /* Magenta glow */
+}
+
+/* Add glow on button click (active state) */
+button:active {
+    transform: translateY(2px);
+    box-shadow: 0 0 10px 3px rgba(255, 0, 255, 0.5); /* Active glow effect */
+}
+
 .try-now-button {
     display: inline-block;
     margin: 20px auto;
@@ -268,4 +303,3 @@ footer a:hover {
     transform: translateY(2px);
     box-shadow: 0 4px 8px rgba(255, 0, 255, 0.6);
 }
-
