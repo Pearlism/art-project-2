@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Canvas</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="canvas.js"></script>
+    <script defer src="particles.js"></script>
+</head>
+
+<body>
+    <main>
+        <!-- Particle Background Canvas -->
+        <canvas id="particleCanvas"></canvas>
+        
+        <!-- Drawing Canvas -->
+        <div class="controls">
+            <label for="brushSize">Brush Size: <span id="brushSizeDisplay">5</span></label>
+            <input type="range" id="brushSize" min="1" max="50" value="5" />
+            <input type="color" id="colorPicker" title="Pick a color" />
+            <button id="eraseAll">Erase All</button>
+            <button id="toggleEraser">Switch to Eraser</button>
+            <button id="backToBrush">Back to Brush</button>
+        </div>
+        <canvas id="drawingCanvas"></canvas>
+    </main>
+</body>
+
+</html>
