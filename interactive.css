@@ -1,0 +1,109 @@
+/* Styles for interactive.html */
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: transparent; /* Make background transparent */
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    position: relative;
+}
+
+
+header {
+    background-color: #FF00FF; /* Magenta background for header */
+    color: white;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    z-index: 10;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav a {
+    color: #FF00FF;
+    margin: 0 10px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #e600e6;
+}
+
+.controls {
+    text-align: center;
+    margin-top: 20px;
+    z-index: 10;
+    position: relative;
+}
+
+.controls button {
+    background-color: #FF00FF;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    margin: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.controls button:hover {
+    background-color: #e600e6;
+    transform: translateY(-2px);
+    box-shadow: 0 0 15px 4px rgba(255, 0, 255, 0.6); /* Purple glow effect */
+    text-shadow: 0 0 8px rgba(255, 0, 255, 0.8); /* Text glow effect */
+}
+
+.controls button:active {
+    transform: translateY(2px);
+    box-shadow: 0 0 15px 4px rgba(255, 0, 255, 0.6); /* Keep the glow on click */
+}
+
+
+canvas {
+    display: block;
+    margin: 20px auto;
+    background-color: #fff;
+    cursor: crosshair;
+    border: 2px solid #FF00FF;
+    max-width: 100%;
+    z-index: 100; /* Ensure canvas is on top of particles */
+    position: relative;
+    transition: box-shadow 0.3s ease; /* Smooth transition for glow effect */
+}
+
+canvas:hover {
+    box-shadow: 0 0 15px 5px rgba(255, 0, 255, 0.8); /* Glowing purple border effect */
+}
+
+
+/* Particles.js background styling */
+#particles-js {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1; /* Ensure particles are in the background */
+}
+
+/* Footer styling */
+footer {
+    background: transparent;
+    color: #FF00FF;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    z-index: 10;
+}
+
+footer p {
+    margin: 0;
+}

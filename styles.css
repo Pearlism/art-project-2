@@ -1,4 +1,4 @@
-/* General Styles */
+/* General Styles for index.html */
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
@@ -28,15 +28,6 @@ nav a {
 nav a:hover {
     color: #e600e6;
 }
-
-canvas {
-    border: 2px solid #FF00FF;
-    display: block;
-    margin: 20px auto;
-    background-color: #fff;
-    cursor: crosshair;
-}
-
 
 main {
     padding: 20px;
@@ -159,14 +150,14 @@ button:active {
     box-shadow: 0 0 10px 3px rgba(255, 0, 255, 0.5); /* Active glow effect */
 }
 
-/* Footer */
 footer {
- background: #222; /* Dark background for footer */
-    color: #fff; /* White text for contrast */
+    background: transparent; /* Fully transparent background */
+    color: #ff00ff;
     text-align: center;
     padding: 20px;
     position: relative;
 }
+
 
 footer a {
     color: #FF00FF; /* Magenta links in footer */
@@ -186,76 +177,6 @@ footer a:hover {
     to {
         opacity: 1;
     }
-}
-
-@keyframes slideDown {
-    from {
-        transform: translateY(-20px);
-        opacity: 0;
-    }
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-
-.controls {
-    text-align: center;
-    margin: 20px 0;
-}
-
-.controls button {
-    margin: 0 10px;
-    padding: 10px 20px;
-    font-size: 16px;
-    font-weight: bold;
-    color: white;
-    background: #FF00FF;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background 0.3s ease, transform 0.2s ease;
-}
-
-.controls button:hover {
-    background: #e600e6;
-    transform: translateY(-3px);
-}
-
-.controls input[type="color"] {
-    width: 50px;
-    height: 50px;
-    border: none;
-    cursor: pointer;
-    margin-left: 10px;
-}
-
-.controls input[type="range"] {
-    width: 150px; /* Reduced width of the slider */
-    margin-top: 10px;
-}
-
-/* Erase All Button with Glow Effect */
-#eraseAll {
-    margin-top: 10px;
-    padding: 10px 20px;
-    background-color: #FF00FF;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s, box-shadow 0.3s;
-}
-
-#eraseAll:hover {
-    background-color: #e600e6;
-    box-shadow: 0 0 15px 5px rgba(255, 0, 255, 0.6); /* Magenta glow */
-}
-
-/* Add glow on button click (active state) */
-button:active {
-    transform: translateY(2px);
-    box-shadow: 0 0 10px 3px rgba(255, 0, 255, 0.5); /* Active glow effect */
 }
 
 .try-now-button {
@@ -303,3 +224,22 @@ button:active {
     transform: translateY(2px);
     box-shadow: 0 4px 8px rgba(255, 0, 255, 0.6);
 }
+
+footer {
+    background: transparent;
+    color: #ff00ff;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+}
+
+footer a {
+    color: #FF00FF;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #e600e6;
+}
+

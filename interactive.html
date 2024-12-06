@@ -5,11 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Interactive Canvas</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="interactive.css"> <!-- Linking the external styles -->
     <script defer src="canvas.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 </head>
 
 <body>
+    <div id="particles-js"></div> <!-- Particles.js background -->
+
     <header>
         <h1>Try Drawing with 1 Hand on this Canvas</h1>
         <nav>
@@ -17,6 +20,7 @@
             <a href="interactive.html">Canvas</a>
         </nav>
     </header>
+
     <main>
         <div class="controls">
             <label for="brushSize">Brush Size: <span id="brushSizeDisplay">5</span></label>
@@ -24,13 +28,87 @@
             <input type="color" id="colorPicker" title="Pick a color" />
             <button id="eraseAll">Erase All</button>
             <button id="toggleEraser">Switch to Eraser</button>
-            <button id="backToBrush">Back to Brush</button>
         </div>
         <canvas id="drawingCanvas"></canvas>
     </main>
+
     <footer>
         <p>Made by Landen for Vanlue Art 2024</p>
     </footer>
+
+    <script>
+        // Initialize particles.js
+        particlesJS("particles-js", {
+            "particles": {
+                "number": {
+                    "value": 80,
+                    "density": {
+                        "enable": true,
+                        "value_area": 800
+                    }
+                },
+                "color": {
+                    "value": "#FF00FF"
+                },
+                "shape": {
+                    "type": "circle",
+                    "stroke": {
+                        "width": 0,
+                        "color": "#000000"
+                    }
+                },
+                "opacity": {
+                    "value": 0.5,
+                    "random": false
+                },
+                "size": {
+                    "value": 5,
+                    "random": true
+                },
+                "line_linked": {
+                    "enable": true,
+                    "distance": 150,
+                    "color": "#FF00FF",
+                    "opacity": 0.4,
+                    "width": 1
+                },
+                "move": {
+                    "enable": true,
+                    "speed": 6,
+                    "direction": "none",
+                    "random": false,
+                    "straight": false,
+                    "out_mode": "out",
+                    "bounce": false
+                }
+            },
+            "interactivity": {
+                "detect_on": "canvas",
+                "events": {
+                    "onhover": {
+                        "enable": true,
+                        "mode": "grab"
+                    },
+                    "onclick": {
+                        "enable": true,
+                        "mode": "push"
+                    }
+                },
+                "modes": {
+                    "grab": {
+                        "distance": 140,
+                        "line_linked": {
+                            "opacity": 1
+                        }
+                    },
+                    "push": {
+                        "particles_nb": 4
+                    }
+                }
+            },
+            "retina_detect": true
+        });
+    </script>
 </body>
 
 </html>
