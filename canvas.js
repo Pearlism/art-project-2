@@ -8,7 +8,7 @@ canvas.height = window.innerHeight * 0.6;
 // Brush settings
 let painting = false;
 let erasing = false;
-let brushSize = 5;
+let brushSize = 15;
 let brushColor = "#FF00FF";
 
 // Start and stop painting
